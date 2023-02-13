@@ -22,20 +22,20 @@ static void Main(string[] args)
 
 ## Methods
 
-FindFirst
-Exists
-Until
-Invoke
-Expand
-Collapse
-SelectionItem
-VizualizedItem
-Transform
-Write
-Window
-CloseWindow
-SendKey
-Children
+ - FindFirst
+ - Exists
+ - Until
+ - Invoke
+ - Expand
+ - Collapse
+ - SelectionItem
+ - VizualizedItem
+ - Transform
+ - Write
+ - Window
+ - CloseWindow
+ - SendKey
+ - Children
 
 [propids](https://learn.microsoft.com/en-us/windows/win32/winauto/uiauto-automation-element-propids)
 ``` c#
