@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0-windows</TargetFramework>
@@ -10,6 +10,13 @@
     <Description>UIAutomationClient wrapper</Description>
     <PackageIcon>chicken.png</PackageIcon>
     <PackageProjectUrl>https://github.com/MichalKuracina/UIA-wrapper</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/MichalKuracina/UIA-wrapper</RepositoryUrl>
+    <PackageTags>UIAutomationClient wrapper</PackageTags>
+
+	  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+
+	  <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,8 +31,20 @@
     </COMReference>
   </ItemGroup>
 
+	<ItemGroup>
+		<None Include="LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<Content Include="chicken_animal_5834.ico" />
+	</ItemGroup>
+
   <ItemGroup>
-    <Content Include="chicken_animal_5834.ico" />
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

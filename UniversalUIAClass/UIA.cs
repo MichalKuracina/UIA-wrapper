@@ -264,6 +264,32 @@ namespace UniversalUIAClass
             throw new ArgumentOutOfRangeException($"Visual state '{state}' does not exist. Allowed: Min, Max or Normal");
         }
 
+        /// <summary>
+        /// <b>User32.dll</b> overload. You must specify 'MainWindowHandle' property when using this method. https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.process.start?view=net-7.0 <br/>State:<i> min, max, normal</i>
+        /// </summary>
+        /// <param name="windowHandle"></param>
+        /// <param name="state"></param>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        public void Window(IntPtr windowHandle, string state)
+        {
+            switch (state.ToLower())
+            {
+                case ("min"):
+                    ShowWindow(windowHandle, (int)WindowControls.SW_MINIMIZE);
+                    Thread.Sleep(_sleep);
+                    return;
+                case ("max"):
+                    ShowWindow(windowHandle, (int)WindowControls.SW_MAXIMIZE);
+                    Thread.Sleep(_sleep);
+                    return;
+                case ("normal"):
+                    ShowWindow(windowHandle, (int)WindowControls.SW_SHOWNORMAL);
+                    Thread.Sleep(_sleep);
+                    return;
+            }
+            throw new ArgumentOutOfRangeException($"Visual state '{state}' does not exist. Allowed: Min, Max or Normal");
+        }
+
         private IntPtr GetWindowHandle(string title)
         {
             IntPtr handle = IntPtr.Zero;
